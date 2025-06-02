@@ -13,8 +13,8 @@ This project implements a real-time data pipeline that simulates sales events. T
 - Apache Kafka: Message broker for data streaming.
 - Docker: Containerization of services.
 - Cassandra: Distributed NoSQL database.
-- Apache Spark (PySpark): Distributed real-time data processing.
-- Python: Data generation (producer) and pipeline management.
+- Apache Spark 3.5.* (PySpark): Distributed real-time data processing.
+- Python 3.12.*: Data generation (producer) and pipeline management.
 
 ## **Setup and Execution**
 
@@ -86,6 +86,7 @@ cassandra
 ```
 
 ### **4️⃣ Execute the CQL script to create keyspaces and tables:**
+NOTE: Wait until Cassandra container is ready.
 
 ```bash
 docker run --rm \

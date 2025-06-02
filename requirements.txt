@@ -1,5 +1,5 @@
 Faker==37.1.0
-kafka-python==3.12.*
+kafka-python==3.12.6
 py4j==0.10.9.7
-pyspark==3.5.*
+pyspark==3.5.5
 tzdata==2025.2
