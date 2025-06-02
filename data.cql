@@ -12,6 +12,3 @@ CREATE TABLE IF NOT EXISTS ecommerce.sales (
 );
 
 
--- Insert some data
-// INSERT INTO ecommerce.sales (product_name, total_sales) 
-// VALUES ('TV', 85.88);
