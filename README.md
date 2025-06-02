@@ -54,7 +54,7 @@ docker exec -it kafka-server /opt/kafka/bin/kafka-topics.sh --create  --topic sa
 
 ### **4️⃣ List Available Topics:**
 
-Verify that the topic has been created successfully.
+You can verify that the topic has been created successfully.
 
 ```bash
 docker exec -it kafka-server /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
@@ -150,7 +150,7 @@ spark-submit \
 
 ### 📊 View data
 
-Enter the cassandra terminal
+Open the Cassandra Interactive Client (CQLSH)
 ```bash
 docker exec -it cassandra cqlsh
 ```
