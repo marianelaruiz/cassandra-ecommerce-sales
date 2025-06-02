@@ -86,7 +86,7 @@ cassandra
 ```
 
 ### **4️⃣ Execute the CQL script to create keyspaces and tables:**
-NOTE: Wait until Cassandra container is ready.
+NOTE: Wait 30-40 seconds until Cassandra container is ready.
 
 ```bash
 docker run --rm \
