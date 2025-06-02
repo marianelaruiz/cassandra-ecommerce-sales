@@ -1,0 +1,70 @@
+Notas o Pasos:
+Catch me
+Tomer after time
+Somewhere to know...
+take on me
+I Won't Give Up
+
+KAFKA
+1️⃣ Pull the Kafka Docker Image:
+docker pull apache/kafka:4.0.0
+
+2️⃣ Start the Kafka Docker Container:
+docker run --name kafka-server -p 9092:9092 -d apache/kafka:4.0.0
+
+**3️⃣ Create a Kafka Topic:**
+Create the topic `sales-events` inside the Kafka container.
+docker exec -it kafka-server /opt/kafka/bin/kafka-topics.sh --create     --topic sales-events    --bootstrap-server localhost:9092
+
+CASSANDRA
+1️⃣ Pull the cassandra Docker Image:
+docker pull cassandra:latest
+
+# Crear una red de Docker (si aún no existe)
+docker network create cassandra
+
+2️⃣ Start the cassandra Docker Container:
+----------------------------------------------docker run --rm -d --name cassandra --hostname cassandra --network cassandra cassandra
+
+docker run --rm -d \
+--name cassandra \
+--hostname cassandra \
+--network cassandra \
+-p 9042:9042 \
+cassandra
+
+
+# Ejecutar tu script .cql
+docker run --rm \
+  --network cassandra \
+  -v "$(pwd)/data.cql:/scripts/data.cql" \
+  cassandra \
+  cqlsh cassandra -f /scripts/data.cql
+
+# Acceder al cliente CQLSH
+docker exec -it cassandra cqlsh
+
+PYTHON
+# Create the virtual enviroment 
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install the dependencies
+pip install -r requirements.txt
+
+# Run the producer
+python3 producer.py
+
+PYSPARK
+# Run the consumer
+spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 \
+  consumer.py
+
+spark-submit   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 consumer.py
+
+# Check Casandra Table
+docker exec -it cassandra cqlsh
+select * from ecommerce.sales;
