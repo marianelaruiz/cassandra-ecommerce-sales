@@ -18,6 +18,14 @@ This project implements a real-time data pipeline that simulates sales events. T
 
 ## **Setup and Execution**
 
+### **Install and Run**
+```bash
+# Clone this repo
+$ git clone https://github.com/marianelaruiz/cassandra-ecommerce-sales
+# Enter the project folder
+$ cd cassandra-ecommerce-sales
+```
+
 ### 🔗 Kafka
 
 ### **1️⃣ Pull the Kafka Docker Image:**
@@ -91,14 +99,30 @@ docker run --rm \
 
 ### **1️⃣ Create a virtual environment:**
 
+***MacOS & Linux***
+
 ```bash
 python3 -m venv venv
 ```
+
+***Windows***
+```bash
+python -m venv venv 
+```
+
 ### **2️⃣ Activate the environment:**
+
+***MacOS & Linux***
 
 ```bash
 source venv/bin/activate
 ```
+
+***Windows***
+```bash
+venv\Scripts\activate
+```
+
 
 ### **3️⃣ Install dependencies:**
 
