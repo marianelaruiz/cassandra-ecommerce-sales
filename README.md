@@ -149,13 +149,13 @@ spark-submit \
 
 ### 📊 View data
 
+Enter the cassandra terminal
 ```bash
-# Enter the cassandra terminal
 docker exec -it cassandra cqlsh
 ```
 
+Check Casandra Table
 ```bash
-# Check Casandra Table
 select * from ecommerce.sales;
 ```
 
