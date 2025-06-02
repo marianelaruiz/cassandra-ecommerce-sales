@@ -147,7 +147,21 @@ spark-submit \
   consumer.py
 ```
 
-## 📊 Project Workflow
+### 📊 View data
+
+```bash
+# Enter the cassandra terminal
+docker exec -it cassandra cqlsh
+```
+
+```bash
+# Check Casandra Table
+select * from ecommerce.sales;
+```
+
+
+
+##  Project Workflow
 
 ```bash
 [ Producer (Python) ] ---> [ Kafka Topic: sales-events ] ---> [ Spark Streaming Consumer ] ---> [ Cassandra ]
