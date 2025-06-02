@@ -5,3 +5,4 @@ env/
 kafka_venv/
 .venv/
 checkpoints/
+pasos/
